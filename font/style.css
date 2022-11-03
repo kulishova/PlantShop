@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?hgny3p');
+  src:  url('fonts/icons.eot?hgny3p#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?hgny3p') format('truetype'),
+    url('fonts/icons.woff?hgny3p') format('woff'),
+    url('fonts/icons.svg?hgny3p#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic_search:before {
+  content: "\e90a";
+}
+.ic_temperature:before {
+  content: "\e909";
+}
+.ic_sun:before {
+  content: "\e907";
+}
+.ic_flower:before {
+  content: "\e908";
+}
+.ic_draw:before {
+  content: "\e901";
+}
+.ic_box:before {
+  content: "\e900";
+}
+.ic_arrow:before {
+  content: "\e902";
+  color: #4f4f4f;
+}
+.ic_card:before {
+  content: "\e903";
+}
+.ic_pay:before {
+  content: "\e904";
+}
+.ic_plus:before {
+  content: "\e905";
+}
+.ic_support:before {
+  content: "\e906";
+}

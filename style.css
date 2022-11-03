@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --gradient: linear-gradient(to right, #2af598, #009efd);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+/* Каркас */
+.container {
+  max-width: 1487px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Первый экран */
+.fs {
+  background: url(/img/bg.jpg) center / cover;
+  height: 100vh;
+  position: relative;
+  padding-top: 50px;
+}
+.fs::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10%;
+  background: linear-gradient(to bottom, transparent, white);
+}
+.fs .container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 68px;
+}
+
+.link {
+  font-size: 24px;
+}
+
+.link:hover,
+.link a.active {
+  font-weight: 500;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cart {
+  font-size: 36px;
+  color: white;
+  position: relative;
+}
+.cart__count {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d3949;
+  width: 21px;
+  height: 21px;
+  border-radius: 21px;
+  background: var(--gradient);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  top: 1px;
+  right: -6px;
+}
+
+/* Выгодное предложение */
+.vygody {
+  height: 100px;
+}
+
+/* 2:15:40 */
