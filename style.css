@@ -105,7 +105,7 @@ a {
 /* Выгодное предложение */
 .vygody {
   height: 100px;
-  padding: 100px 0 140px;
+  padding: 100px 0 0px;
 }
 .vygody .container {
   display: flex;
@@ -138,7 +138,156 @@ a {
   color: #828282;
   font-weight: 500;
 }
+/* Best products */
+.best {
+  margin-bottom: 282px;
+  margin-top: 265px;
+}
+.best .container {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 16vw);
+  grid-gap: 32px;
+}
+.best .container > * {
+  height: 400px;
+}
+.best__info {
+  font-weight: 500;
+}
+.best__title {
+  font-size: 64px;
+}
 
+.best__more {
+  font-size: 24px;
+  color: #4f4f4f;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.product {
+  border-radius: 50px;
+  background-color: #c1d0e4;
+  display: grid;
+  grid-template-rows: 15vw 12vw;
+}
+
+.product__img {
+  width: 100%;
+  position: relative;
+  top: -6vw;
+}
+.product__info {
+  border-radius: 50px;
+  background-color: #fff;
+  padding: 26px 38px;
+  box-shadow: 0px 4px 30px rgba(221, 218, 218, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+.product__title {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 7px;
+}
+.product__rating {
+  font-size: 18px;
+  color: #f2c94c;
+}
+.product__btn {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  justify-content: space-between;
+}
+.product__price {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.product__add {
+  cursor: pointer;
+  font-size: 58px;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Interior */
+.interior {
+  margin-bottom: 282px;
+}
+.title {
+  font-weight: 500;
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.description {
+  font-weight: 400;
+  font-size: 24px;
+  color: #4f4f4f;
+  text-align: center;
+  margin-bottom: 82px;
+}
+.interior__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 26vw 18vw;
+  grid-gap: 32px;
+}
+.block {
+  cursor: pointer;
+  background: url('./img/block-1.jpg') center / 110% auto;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition: all 1.5s ease-in-out;
+}
+.block:hover {
+  background-size: 112% auto;
+}
+.block span {
+  font-weight: 600;
+  font-size: 64px;
+  color: #fff;
+}
+.block::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.block > * {
+  position: relative;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+.block:hover > * {
+  opacity: 1;
+}
+.block:hover::before {
+  opacity: 0.3;
+}
+.block:nth-child(2) {
+  background: url('./img/block-2.jpg');
+  grid-row: 1 / -1;
+  grid-column: 2;
+}
+.block:nth-child(3) {
+  background: url('./img/block-3.jpg');
+}
 /* UI Kit */
 /* Input with button */
 .input {
@@ -186,18 +335,18 @@ a {
 }
 .tooltip.tooltip_1 {
   position: absolute;
-  right: 1%;
-  bottom: 11%;
+  right: 0%;
+  bottom: 4%;
 }
 .tooltip.tooltip_2 {
   position: absolute;
   left: 28%;
-  bottom: 5%;
+  bottom: 0%;
 }
 .tooltip.tooltip_3 {
   position: absolute;
   left: 13%;
-  bottom: 14%;
+  bottom: 8%;
 }
 .tooltip .tooltip__circle {
   --size: 54px;
@@ -267,3 +416,5 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
   filter: blur(1px);
 }
+
+/*  */
