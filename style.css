@@ -113,31 +113,7 @@ a {
   align-items: center;
   justify-content: space-around;
 }
-.info {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-.info i {
-  font-size: 72px;
-  background: var(--gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.info div {
-  display: grid;
-}
-.info strong {
-  font-weight: 500;
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-.info span {
-  font-size: 20px;
-  color: #828282;
-  font-weight: 500;
-}
+
 /* Best products */
 .best {
   margin-bottom: 282px;
@@ -217,21 +193,9 @@ a {
 }
 /* Interior */
 .interior {
-  margin-bottom: 282px;
+  margin: 200px 0;
 }
-.title {
-  font-weight: 500;
-  font-size: 64px;
-  text-align: center;
-  margin-bottom: 28px;
-}
-.description {
-  font-weight: 400;
-  font-size: 24px;
-  color: #4f4f4f;
-  text-align: center;
-  margin-bottom: 82px;
-}
+
 .interior__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -288,7 +252,85 @@ a {
 .block:nth-child(3) {
   background: url('./img/block-3.jpg');
 }
+/* How */
+.how {
+  margin-bottom: 220px;
+}
+.how .container {
+  display: grid;
+  grid-template-columns: 1fr 656px;
+  grid-gap: 10vw;
+}
+.how .title,
+.how .description {
+  text-align: left;
+}
+.how__list {
+  display: grid;
+  grid-gap: 32px;
+}
+.how .info i {
+  font-size: 60px;
+  align-self: flex-start;
+}
+
+.how__img {
+  height: 618px;
+  background: url(./img/how.jpg) center / cover;
+  border-radius: 50px;
+  align-self: center;
+}
+
+/* Footer */
+footer {
+  padding: 120px 0;
+  background: linear-gradient(to right, #566270, #283444);
+  color: #fff;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1.4fr) 2fr;
+  grid-gap: 2vw;
+}
+footer hr {
+  margin: 52px 0;
+}
+.footer_title {
+  font-weight: 500;
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.footer__info {
+}
+.footer__label {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 33px;
+}
+.footer__list {
+  display: grid;
+  grid-gap: 16px;
+}
+.footer_copyright {
+  text-align: center;
+}
+
 /* UI Kit */
+.title {
+  font-weight: 500;
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.description {
+  font-weight: 400;
+  font-size: 24px;
+  color: #4f4f4f;
+  text-align: center;
+  margin-bottom: 82px;
+}
+
 /* Input with button */
 .input {
   width: 462px;
@@ -323,6 +365,9 @@ a {
   display: grid;
   align-items: center;
   justify-items: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
 }
 .input__btn div {
   margin: 0 24px;
@@ -331,22 +376,22 @@ a {
 /* Tooltips */
 
 .tooltip {
-  position: relative;
+  position: fixed;
 }
 .tooltip.tooltip_1 {
   position: absolute;
-  right: 0%;
-  bottom: 4%;
+  right: 2%;
+  bottom: 15%;
 }
 .tooltip.tooltip_2 {
   position: absolute;
   left: 28%;
-  bottom: 0%;
+  bottom: 10%;
 }
 .tooltip.tooltip_3 {
   position: absolute;
   left: 13%;
-  bottom: 8%;
+  bottom: 18%;
 }
 .tooltip .tooltip__circle {
   --size: 54px;
@@ -417,4 +462,29 @@ a {
   filter: blur(1px);
 }
 
-/*  */
+/* Info */
+.info {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.info i {
+  font-size: 72px;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.info div {
+  display: grid;
+}
+.info strong {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.info span {
+  font-size: 20px;
+  color: #828282;
+  font-weight: 500;
+}
